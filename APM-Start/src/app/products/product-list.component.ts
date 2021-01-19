@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
-import {ProductService} from './product.service';
+import { ProductService } from './product.service';
 
 @Component({
   selector: 'pm-products',
@@ -28,11 +28,11 @@ export class ProductListComponent implements OnInit {
   products: IProduct[] = [];
 
   constructor(private ProductService: ProductService) {
-      this.listFilter;
+    this.listFilter;
   }
 
   onRatingClicked(message: string): void {
-      this.pageTitle = 'Product List: ' + message;
+    this.pageTitle = 'Product List: ' + message;
   }
 
   performFilter(filterBy: string): IProduct[] {
